@@ -1,4 +1,8 @@
 <div>
+  <div class="my-3">{{customChannelName$ | async}}</div>
   <input type="text" placeholder="custom value" [(ngModel)]="value">
   <button class="btn btn-primary" (click)="onAdd()">add custom value</button>
+</div>
+<div class="my-3">
+  <button class="btn btn-danger" (click)="onChangeChannelName()">Change Channel Name</button>
 </div>
