@@ -1,6 +1,6 @@
 import {createReducer, on} from '@ngrx/store';
 import {initialState} from './posts.state';
-import {addPost, updatePost} from './posts.action';
+import {addPost, deletePost, updatePost} from './posts.action';
 
 // tslint:disable-next-line:variable-name
 const _postReducers = createReducer(initialState,
@@ -16,6 +16,14 @@ const _postReducers = createReducer(initialState,
     const updatedPosts = state.posts.map((post) =>{
       return action.post.id === post.id ? action.post : post
     })
+
+    return {
+      ...state,
+      posts: updatedPosts
+    }
+  }),
+  on(deletePost, (state, action) => {
+    const updatedPosts = state.posts.filter(post => post.id !== action.id)
 
     return {
       ...state,
