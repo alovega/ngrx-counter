@@ -21,7 +21,7 @@ import {appReducer} from './store/app.state';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot(appReducer, {}),
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production,
       // autoPause: true, // Pauses recording actions and state changes when the extension window is not open
