@@ -1,9 +1,9 @@
- export interface counterState {
-   counter: number,
-   channelName: string
+ export interface CounterState {
+   counter: number;
+   channelName: string;
  }
 
-export const initialState: counterState = {
+ export const initialState: CounterState = {
   counter: 4,
   channelName: 'Kelvin Wraptious Developer'
-}
+};
